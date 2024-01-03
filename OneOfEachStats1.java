@@ -1,11 +1,45 @@
-/**
- *  Computes some statistics about families in which the parents decide 
- *  to have children until they have at least one child of each gender.
- *  The program expects to get one command-line argument: an int value
- * 	that determines how many families to simulate.
- */
 public class OneOfEachStats1 {
-	public static void main (String[] args) {
-		//// Put your code here
+    public static void main(String[] args) {
+	int tests = Integer.parseInt(args[0]);
+	int family2 = 0;
+	int family3 = 0;
+	int family4 = 0;
+	double countC = 0.0 ;
+	for (int i=0 ; i<=tests ; i++) {
+	boolean boy = false;
+	boolean girl = false;
+	int count = 0 ;
+	 do {
+	double x = (Math.random());
+	countC++ ;
+		if ((0.0 < x && x < 0.5)) {
+		boy = true ;
+		count += 1 ;
+	}else {
+		girl = true ;
+		count += 1 ;
 	}
+		} while ((boy == false) || (girl == false)) ;
+		if (count == 2){
+			family2+=1 ;
+		} else if (count == 3) {
+			family3+=1;
+		} else if (count >+4) {
+			family4+=1;
+		}
+	}
+	double averageChildren = countC / tests;
+	System.out.println("Average: " + averageChildren + "children to get at least one of each gender.") ;
+	System.out.println("number of families with 2 children: " + family2);
+	System.out.println("number of families with 3 children: " + family3);
+	System.out.println("number of families with 4 or more children: " +family4);
+	
+	if (family2>family3 && family2>family4) {
+		System.out.println("The most common number of children is 2.");
+		}else if (family3>family2 && family3>family4) {
+		System.out.println("The most common number of children is 3.");
+			}else if (family4>family2 && family4>family3) {
+			System.out.println("The most common number of children is 4.");
+			}
+}
 }
