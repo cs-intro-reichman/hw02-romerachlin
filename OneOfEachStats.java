@@ -13,21 +13,21 @@ public class OneOfEachStats {
 	boolean girl = false;
 	int count = 0 ;
 	 do {
-	double x = generator.nextDouble() ;
-	countC++ ;
-		if ((0.0 < x && x < 0.5)) {
-		boy = true ;
-		count += 1 ;
-	}else {
-		girl = true ;
-		count += 1 ;
-	}
+		double x = generator.nextDouble() ;
+		countC++ ;
+			if ((0.0 < x && x < 0.5)) {
+			boy = true ;
+			count += 1 ;
+		}else {
+			girl = true ;
+			count += 1 ;
+		}
 		} while ((boy == false) || (girl == false)) ;
 		if (count == 2){
 			family2+=1 ;
 		} else if (count == 3) {
 			family3+=1;
-		} else if (count >+4) {
+		} else if (count >=4) {
 			family4+=1;
 		}
 	}
