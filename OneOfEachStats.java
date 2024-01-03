@@ -1,3 +1,4 @@
+import java.util.Random;
 public class OneOfEachStats {
     public static void main(String[] args) {
 	int tests = Integer.parseInt(args[0]);
@@ -6,14 +7,15 @@ public class OneOfEachStats {
 	int family3 = 0;
 	int family4 = 0;
 	double countC = 0.0 ;
+	Random generator = new Random(seed); 
 	for (int i=0 ; i<=tests ; i++) {
 	boolean boy = false;
 	boolean girl = false;
 	int count = 0 ;
 	 do {
-	double RandomGenerator = new (Random(seed)); 
+	double x = generator.nextDouble() ;
 	countC++ ;
-		if ((0.0 < RandomGenerator && RandomGenerator < 0.5)) {
+		if ((0.0 < x && x < 0.5)) {
 		boy = true ;
 		count += 1 ;
 	}else {
@@ -30,7 +32,7 @@ public class OneOfEachStats {
 		}
 	}
 	double averageChildren = countC / tests;
-	System.out.println("Average: " + averageChildren + "children to get at least one of each gender.") ;
+	System.out.println("Average: " + averageChildren + " children to get at least one of each gender.") ;
 	System.out.println("number of families with 2 children: " + family2);
 	System.out.println("number of families with 3 children: " + family3);
 	System.out.println("number of families with 4 or more children: " +family4);
