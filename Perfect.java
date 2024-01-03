@@ -12,7 +12,7 @@ public class Perfect {
         }
 
         if (sum == input) {
-            System.out.println(input + " is a perfect number since " + divisorString + " = " + input);
+            System.out.println(input + " is a perfect number since " + input + " = " + divisorString);
         } else {
             System.out.println(input + " is not a perfect number");
         }
