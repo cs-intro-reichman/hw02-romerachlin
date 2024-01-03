@@ -2,7 +2,7 @@ import java.util.Random;
 public class OneOfEachStats {
     public static void main(String[] args) {
 	int tests = Integer.parseInt(args[0]);
-	int seed = Integer.parseInt(args[0]);
+	int seed = Integer.parseInt(args[1]);
 	int family2 = 0;
 	int family3 = 0;
 	int family4 = 0;
@@ -15,7 +15,7 @@ public class OneOfEachStats {
 	 do {
 		double x = generator.nextDouble() ;
 		countC++ ;
-			if ((0.0 < x && x < 0.5)) {
+			if (x < 0.5) {
 			boy = true ;
 			count += 1 ;
 		}else {
