@@ -33,9 +33,9 @@ public class OneOfEachStats {
 	}
 	double averageChildren = countC / tests;
 	System.out.println("Average: " + averageChildren + " children to get at least one of each gender.") ;
-	System.out.println("number of families with 2 children: " + family2);
-	System.out.println("number of families with 3 children: " + family3);
-	System.out.println("number of families with 4 or more children: " +family4);
+	System.out.println("Number of families with 2 children: " + family2);
+	System.out.println("Number of families with 3 children: " + family3);
+	System.out.println("Number of families with 4 or more children: " +family4);
 	
 	if (family2>family3 && family2>family4) {
 		System.out.println("The most common number of children is 2.");
