@@ -8,7 +8,7 @@ public class OneOfEachStats {
 	int family4 = 0;
 	double countC = 0.0 ;
 	Random generator = new Random(seed); 
-	for (int i=0 ; i<=tests ; i++) {
+	for (int i=0 ; i<tests ; i++) {
 	boolean boy = false;
 	boolean girl = false;
 	int count = 0 ;
