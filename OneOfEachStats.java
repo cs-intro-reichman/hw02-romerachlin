@@ -11,7 +11,7 @@ public class OneOfEachStats {
 	boolean girl = false;
 	int count = 0 ;
 	 do {
-	double Random generator = new Random(seed); 
+	double RandomGenerator = new Random(seed); 
 	countC++ ;
 		if ((0.0 < x && x < 0.5)) {
 		boy = true ;
