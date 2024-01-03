@@ -13,7 +13,7 @@ public class OneOfEachStats {
 	 do {
 	double RandomGenerator = new Random(seed); 
 	countC++ ;
-		if ((0.0 < x && x < 0.5)) {
+		if ((0.0 < RandomGenerator && RandomGenerator < 0.5)) {
 		boy = true ;
 		count += 1 ;
 	}else {
